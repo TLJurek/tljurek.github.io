@@ -40,6 +40,43 @@
         height: 400px;
         background-color: grey;
       }
+    .footer-item {
+      text-decoration: none; 
+      color: #333333; 
+      font-weight: normal; 
+      padding: 1rem;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: 1max-content 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas: "Img Content";
+    }
+
+    .Img { 
+      grid-area: Img;
+      text-align: center;
+    }
+    .img-thumb-item {
+      margin: 6px;
+      max-width: 200px;
+    }
+
+    .Content { grid-area: Content; }
+
+    @media only screen and (max-width: 375px) { 
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1min-content;
+        grid-template-areas: "Img" "Content";
+      }
+      .img-thumb-item{
+        margin: 6px;
+        max-width: 100%;
+      }
+    }
+    
   </style>
 
   <!-- News list page-->
@@ -71,81 +108,111 @@
 
       <ul id="news-list" data-role="listview" data-inset="true">
         <li data-icon="false">
-          <img src="assets/images/news/news_1.jpeg" style="margin: 6px;">
-          <h2 class="wrap">THE QUEEN AT WESTMINSTER FASHION WEEK</h2>
-          <p>23 November 2018</p>
-          <p style="font-size: 16px;" class="wrap">Today, Her Majesty The Queen visited Westminster Fashion Week
-            to present the inaugural Queen Elizabeth
-            II Award for British Design.</p>
-          <fieldset class="ui-grid-a">
-            <a href="#news1" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
-              More</a>
-            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
-          </fieldset>
+          <div class="grid-container">
+            <div class="Img">
+              <img src="assets/images/news/news_1.jpeg" class="img-thumb-item">
+            </div>
+            <div class="Content">
+              <h2 class="wrap">THE QUEEN AT WESTMINSTER FASHION WEEK</h2>
+              <p>23 November 2018</p>
+              <p style="font-size: 16px;" class="wrap">Today, Her Majesty The Queen visited Westminster Fashion Week
+                to present the inaugural Queen Elizabeth
+                II Award for British Design.</p>
+              <fieldset class="ui-grid-a">
+                <a href="#news1" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+                  More</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+              </fieldset>
+            </div>
+          </div>
         </li>
         <li data-icon="false">
-          <img src="assets/images/news/news_2.jpeg" style="margin: 6px;">
-          <h2 class="wrap">FASHION SWITCH TO GREEN CAMPAIGN BACKED BY THE MAYOR OF LONDON LAUNCHES
-            AT WESTMINSTER FASHION WEEK</h2>
-          <p>15 November 2018</p>
-          <p style="font-size: 16px;" class="wrap">The British Fashion Council, Dame Vivienne Westwood and the
-            Mayor of London have joined forces in a campaign to bring the fashion industry together to lead in
-            ambitious climate action, for a safer and greener future.</p>
-          <fieldset class="ui-grid-a">
-            <a href="#news2" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
-              More</a>
-            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
-          </fieldset>
+          <div class="grid-container">
+            <div class="Img">
+              <img src="assets/images/news/news_2.jpeg" class="img-thumb-item">
+            </div>
+            <div class="Content">
+              <h2 class="wrap">FASHION SWITCH TO GREEN CAMPAIGN BACKED BY THE MAYOR OF LONDON LAUNCHES
+                AT WESTMINSTER FASHION WEEK</h2>
+              <p>15 November 2018</p>
+              <p style="font-size: 16px;" class="wrap">The British Fashion Council, Dame Vivienne Westwood and the
+                Mayor of London have joined forces in a campaign to bring the fashion industry together to lead in
+                ambitious climate action, for a safer and greener future.</p>
+              <fieldset class="ui-grid-a">
+                <a href="#news2" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+                  More</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+              </fieldset>
+            </div>
+          </div>
         </li>
         <li data-icon="false">
-          <img src="assets/images/news/news_3.jpeg" style="margin: 6px;">
-          <h2 class="wrap">WESTMINSTER FASHION WEEK FEBRUARY 2018 IS A CITY-WIDE CELEBRATION</h2>
-          <p>10 October 2018</p>
-          <p class="wrap" style="font-size: 16px;">Westminster Fashion Week is a city-wide celebration of
-            individualism, openness and diversity.</p>
-          <fieldset class="ui-grid-a">
-            <a href="#news3" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
-              More</a>
-            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
-          </fieldset>
+          <div class="grid-container">
+            <div class="Img">
+              <img src="assets/images/news/news_3.jpeg" class="img-thumb-item">
+            </div>
+            <div class="Content">
+              <h2 class="wrap">WESTMINSTER FASHION WEEK FEBRUARY 2018 IS A CITY-WIDE CELEBRATION</h2>
+              <p>10 October 2018</p>
+              <p class="wrap" style="font-size: 16px;">Westminster Fashion Week is a city-wide celebration of
+                individualism, openness and diversity.</p>
+              <fieldset class="ui-grid-a">
+                <a href="#news3" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+                  More</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+              </fieldset>
+            </div>
+          </div>
         </li>
         <li data-icon="false">
-          <img src="assets/images/news/news_4.jpeg" style="margin: 6px;">
-          <h2 class="wrap">WHAT'S ON AT WESTMINSTER FASHION WEEK SEPTEMBER 2018</h2>
-          <p>30 September 2018</p>
-          <p class="wrap" style="font-size: 16px;">Westminster Fashion Week starts this week and more than ever there
-            are ways for the public to get involved from digital engagement to events across the city.</p>
-          <fieldset class="ui-grid-a">
-            <a href="#news4" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
-              More</a>
-            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
-          </fieldset>
+          <div class="grid-container">
+            <div class="Img">
+              <img src="assets/images/news/news_4.jpeg" class="img-thumb-item">
+            </div>
+            <div class="Content">
+              <h2 class="wrap">WHAT'S ON AT WESTMINSTER FASHION WEEK SEPTEMBER 2018</h2>
+              <p>30 September 2018</p>
+              <p class="wrap" style="font-size: 16px;">Westminster Fashion Week starts this week and more than ever there
+                are ways for the public to get involved from digital engagement to events across the city.</p>
+              <fieldset class="ui-grid-a">
+                <a href="#news4" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+                  More</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+              </fieldset>
+            </div>
+          </div>
         </li>
         <li data-icon="false">
-          <img src="assets/images/news/news_5.jpeg" style="margin: 6px;">
-          <h2 class="wrap">INTERNATIONAL FASHION SHOWCASE 2017 WINNERS ANNOUNCED</h2>
-          <p>15 January 2018</p>
-          <p class="wrap" style="font-size: 16px;">The British Council, BFC and Mercedes-Benz today announced the
-            winners of the International Fashion Showcase, in a prize-giving ceremony at Somerset House.</p>
-          <fieldset class="ui-grid-a">
-            <a href="#news5" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
-              More</a>
-            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
-          </fieldset>
+          <div class="grid-container">
+            <div class="Img">
+              <img src="assets/images/news/news_5.jpeg" class="img-thumb-item">
+            </div>
+            <div class="Content">
+              <h2 class="wrap">INTERNATIONAL FASHION SHOWCASE 2017 WINNERS ANNOUNCED</h2>
+              <p>15 January 2018</p>
+              <p class="wrap" style="font-size: 16px;">The British Council, BFC and Mercedes-Benz today announced the
+                winners of the International Fashion Showcase, in a prize-giving ceremony at Somerset House.</p>
+              <fieldset class="ui-grid-a">
+                <a href="#news5" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+                  More</a>
+                <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+              </fieldset>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
 
     <!--Footer Content-->
-    <div data-role="footer">
-      <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
-        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Home</a>
-        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Events</a>
-        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Designers</a>
-        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">News</a>
-        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">About Us</a>
+    <div data-role="footer" style="text-align: center">
+      <div style="font-size: 15px;">
+        <a href="" class="footer-icon">Home</a>
+        <a href="" class="footer-icon">Events</a>
+        <a href="" class="footer-icon">Designers</a>
+        <a href="" class="footer-icon">News</a>
+        <a href="" class="footer-icon">About Us</a>
       </div>
-      <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
+      <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; margin-top: 1rem;">Westminster Fashion Week © 2018</h1>
     </div>
   </div>
 
@@ -513,14 +580,14 @@
     </div>
 
     <!--Footer Content-->
-    <div data-role="footer" style="background-color: #f4f4f4; padding: 40px 0px;">
-      <div class="center-div">
-        <img src="assets/icons/instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-        <img src="assets/icons/snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
-        <img src="assets/icons/twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-        <img src="assets/icons/facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-      </div>
+<div data-role="footer" style="background-color: #f4f4f4; padding: 40px 0px;">
+    <div class="center-div">
+      <img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+      <img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
     </div>
+</div>
 </div>
 
 </body>
