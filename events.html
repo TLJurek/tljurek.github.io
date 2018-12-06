@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,34 @@
     <link rel="stylesheet" href="custom_css/main.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+      <script type="text/javascript">
+    $(document).ready(function () {
+        $(window).resize(function(){
+                 if(window.innerWidth < 600){
+           $("iframe").css("margin-left","0rem");
+       }else{
+          $("iframe").css("margin-left","0rem"); 
+       }               
+});
+       if(window.innerWidth < 600){
+           $("iframe").css("margin-left","0rem");
+       }else{
+          $("iframe").css("margin-left","0rem"); 
+       }
+$(window).load(function(){
+                 if(window.innerWidth < 600){
+           $("iframe").css("margin-left","0rem");
+       }else{
+          $("iframe").css("margin-left","0rem"); 
+       }               
+});
+       
+         
+    });
+</script>
   </head>
   <body>
-    <div data-role="page" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <div data-role="page" id="events" data-quicklinks="true" style="background-color:#F4F4F4;">
       <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
         <ul data-role="listview">
           <li><a href="index.html">Home</a></li>
@@ -29,131 +55,1110 @@
           text</a>
       </div>
 
-      <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
-      </div>
+     <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+     </div>
 
-      <div class="ui-content">
+     <div class="ui-content">
         <h1>Events</h1>
         <div data-role="collapsible-set">
+            
+            
           <div data-role="collapsible" data-collapsed="false">
             <h1>Shows</h1>
             <ul data-role="listview" data-inset="true" data-filter="true">
                    <li>
-                <a href="events_item.html" rel="external" data-transition="slide">
-                       <img src="assets/images/1_events_pic_120x120.jpg">
-                       <h2>Extraordinary</h2>
-                       <p>9/12/18</p>
+                <a href="#eventitem1" data-transition="slide">
+                           <img src="assets/images/eventimage1.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left;margin-left: 5rem;">Inspiring Edge Fashion Show</h2>
+                       <p style="text-align: left;margin-left: 5rem;">9/12/2018</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                      <img src="assets/images/2_events_pic_120x120.jpg">
-                      <h2>Republic view</h2>
-                      <p>10/12/18</p>
+                <a href="#eventitem2" data-transition="slide">
+                           <img src="assets/images/eventimage2.jpg "style="margin-top: 1rem; max-width: 10em">
+                      <h2 style="text-align: left; margin-left: 5rem;">Swimwear and Lingerie Fashion Show</h2>
+                       <p style="text-align: left;margin-left: 5rem;">09/12/2018</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                       <img src="assets/images/3_events_pic_120x120.jpg">
-                       <h2>Eastern Con</h2>
-                       <p>15/12/18</p>
+                <a href="#eventitem3" data-transition="slide">
+                           <img src="assets/images/eventimage3.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem;"> London Fashion Week // OFS AW19 </h2>
+                       <p style="text-align: left;margin-left: 5rem;">16/02/2019</p>
                 </a>
                      </li>
             </ul>
           </div>
+            
           <div data-role="collapsible">
             <h1>Catwalks</h1>
             <ul data-role="listview" data-inset="true" data-filter="true">
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/4_events_pic_120x120.jpg">
-                       <h2>Cat Show</h2>
-                       <p>7/12/18</p>
+                <a href="#eventitem4" data-transition="slide">
+                           <img src="assets/images/eventimage4.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; ">SMGlobal Catwalk - LONDON FASHION WEEK</h2>
+                       <p style="text-align: left; margin-left: 5rem;">21/09/2019</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/5_events_pic_120x120.jpg">
-                      <h2>Paris Outlook</h2>
-                       <p>11/12/18</p>
+               <a href="#eventitem5" data-transition="slide">
+                           <img src="assets/images/eventimage5.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; ">SMGlobal Catwalk - LONDON FASHION WEEK</h2>
+                       <p style="text-align: left; margin-left: 5rem;">01/03/2019</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/6_events_pic_120x120.jpg">
-                       <h2>Michael Show</h2>
-                       <p>13/12/18</p>
+                <a href="#eventitem6" data-transition="slide">
+                           <img src="assets/images/eventimage6.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; ">The Wedding Lounge</h2>
+                       <p style="text-align: left; margin-left: 5rem;">20/07/2019</p>
                 </a>
                      </li>
             </ul>
           </div>
+            
+            
           <div data-role="collapsible">
             <h1>Parties</h1>
             <ul data-role="listview" data-inset="true" data-filter="true">
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/7_events_pic_120x120.jpg">
-                       <h2>Hip Chip</h2>
-                       <p>02/12/18</p>
+                <a href="#eventitem7">
+                           <img src="assets/images/eventimage7.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; "> UK Glamour Awards Christmas Party</h2>
+                       <p style="text-align: left; margin-left: 5rem;">06/12/2018</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/8_events_pic_120x120.jpg">
-                      <h2>Fly-by</h2>
-                       <p>03/12/18</p>
+                <a href="#eventitem8">
+                           <img src="assets/images/eventimage8.jpg" style="margin-top: 1rem; max-width: 10em">
+                      <h2 style="text-align: left; margin-left: 5rem; ">London Runway Issue 30 Launch Party and Christmas Celebration</h2>
+                       <p style="text-align: left; margin-left: 5rem;">06/12/2018</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/9_events_pic_120x120.jpg">
-                       <h2>Eastern Con</h2>
-                       <p>02/01/19</p>
+                <a href="#eventitem9">
+                           <img src="assets/images/eventimage9.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; ">Burst: All White Party</h2>
+                       <p style="text-align: left; margin-left: 5rem;">15/12/2018</p>
                 </a>
                      </li>
             </ul>
           </div>
+            
+            
           <div data-role="collapsible">
             <h1>Galleries</h1>
             <ul data-role="listview" data-inset="true" data-filter="true">
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/10_events_pic_120x120.jpg">
-                       <h2>Art Deco</h2>
-                       <p>11/12/18</p>
+                <a href="#eventitem10">
+                           <img src="assets/images/eventimage10.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; ">Nakshi Fashion Week 2018</h2>
+                       <p style="text-align: left; margin-left: 5rem;">21/03/2019</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/11_events_pic_120x120.jpg">
-                      <h2>Charing Point</h2>
-                       <p>04/12/18</p>
+                <a href="#eventitem11">
+                           <img src="assets/images/eventimage11.jpg" style="margin-top: 1rem; max-width: 10em">
+                      <h2 style="text-align: left; margin-left: 5rem; ">TRES RASCHE POP UP PARTY + PRESENTATION</h2>
+                       <p style="text-align: left; margin-left: 5rem;">30/11/2018</p>
                 </a>
                      </li>
                    <li>
-                <a href="#index.html">
-                           <img src="assets/images/12_events_pic_120x120.jpg">
-                       <h2>Baptist Art</h2>
-                       <p>29/12/18</p>
+                <a href="#eventitem12"> 
+                           <img src="assets/images/eventimage12.jpg" style="margin-top: 1rem; max-width: 10em">
+                       <h2 style="text-align: left; margin-left: 5rem; ">Kryptik Clothing Launch Party</h2>
+                       <p style="text-align: left; margin-left: 5rem;">01/12/2018</p>
                 </a>
                      </li>
             </ul>
           </div>
         </div>
+         <iframe width="100%" height="200"    src="https://www.youtube.com/embed/UMlg_STHHvk" frameborder="0" allowfullscreen ></iframe>
       </div>
 
 
 
-
-      <div data-role="footer" style="background-color: #f4f4f4; padding: 40px 0px;">
-        <div class="center-div">
-          <img src="assets/icons/instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-          <img src="assets/icons/snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
-          <img src="assets/icons/twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-          <img src="assets/icons/facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
+          <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 0rem;">Home</a>
+          <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 0.5rem;">Events</a>
+          <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 0.5rem;">Designers</a>
+          <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 0.5rem;">News</a>
+          <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 0.5rem;">About Us</a>
         </div>
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
       </div>
+
+        
+    </div>
+      
+                                        <!--EVENT ITEMS-->
+      
+  <div data-role="page" id="eventitem1" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
 
     </div>
+
+    <div style="height:auto; width:100%;  background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>Inspiring Edge Fashion Show</h1>
+        <h5>Fashion Show</h5>
+        <h5>09/12/2018</h5>
+        <p style="text-align:left" align="center">Embrace U Empire presents Inspiring Edge Fashion Show 2018. Brining you an astounding collective of Creatives to blow you off your seats!</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+The Irish Centre,
+Pretoria Road,
+London,
+N17 8DX
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+          <div></div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2477.9348902442466!2d-0.07376008422640443!3d51.606081579651466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ea26e9bfa23%3A0xbdf1cc55d08d7a82!2sThe+Irish+Centre%2C+Pretoria+Rd%2C+London+N17+8DX!5e0!3m2!1sen!2suk!4v1543514523293" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+
+   
+  <div data-role="page" id="eventitem2" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+   <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>Swimwear and Lingerie Fashion Show</h1>
+        <h5>Fashion Show</h5>
+        <h5>09/12/2018</h5>
+        <p style="text-align:left" align="center">On Sunday 9th December, Bedfordshire Fashion week presents a stylish evening of runway show featuring emerging and established designers of lingerie, swimwear, resort wear and more.
+Join for a delightful appraisal of the newest and most exciting intimate apparel collections 
+</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+Grosvenor Casino Luton,
+35 Park Street West,
+Luton, LU1 3BE
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton1" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2463.1424149715376!2d-0.41551738424896795!3d51.87661287969749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48764843957dcef5%3A0x8eb21e09fe297f93!2sGrosvenor+Casino+Luton!5e0!3m2!1sen!2suk!4v1543518821720" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          
+          
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>  
+    
+  <div data-role="page" id="eventitem3" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+  <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>London Fashion Week // OFS AW19</h1>
+        <h5>Fashion Show</h5>
+        <h5>16/02/2019</h5>
+        <p style="text-align:left" align="center">Oxford Fashion Studio will present collections from extra ordinary designers on independent runway shows coinciding with London Fashion Week. London  has been a fashion capital since the 16th century.</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+Devonshire Square,
+London,
+EC2M
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton2" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.832583645713!2d-0.08118828426253612!3d51.51628737963658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb319376c17%3A0x7db953b87b2027c9!2sDevonshire+Square%2C+London!5e0!3m2!1sen!2suk!4v1543519181678" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+  
+  <div data-role="page" id="eventitem4" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+    <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1 >SMGlobal Catwalk - LONDON FASHION WEEK (Season 5)</h1>
+        <h5>Catwalk</h5>
+        <h5>21/09/2019</h5>
+        <p style="text-align:left" align="center">From the runways of New York, London, Paris and Dallas; British born, Award Winning International Fashion Designer and Philanthropist Samina Mughal returns with her new Collection and allows global opportunities for Emerging and Established Designers to showcase their collection in a Fashion Capital of the World.</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+            Clayton Crown Hotel,
+            142-152 Cricklewood Broadway,
+            London,
+            NW2 3ED
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton3" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.6587992993336!2d-0.2163735842610165!3d51.55615527964317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876105f81d73923%3A0x3ea501cf6aa8601d!2sClayton+Crown+Hotel!5e0!3m2!1sen!2suk!4v1543525221478" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+
+  <div data-role="page" id="eventitem5" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+     <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>SMGlobal Catwalk - LONDON FASHION WEEK (Season 4)</h1>
+        <h5>Catwalk</h5>
+        <h5>01/03/2019</h5>
+        <p style="text-align:left" align="center"> From the runways of New York, London, Paris and Dallas; British born, Award Winning International Fashion Designer and Philanthropist Samina Mughal returns with her new Collection and allows global opportunities for Emerging and Established Designers to showcase their collection in a Fashion Capital of the World. </p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+            Clayton Crown Hotel,
+            142-152 Cricklewood Broadway,
+            London,
+            NW2 3ED
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton4" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.6587992993336!2d-0.2163735842610165!3d51.55615527964317!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876105f81d73923%3A0x3ea501cf6aa8601d!2sClayton+Crown+Hotel!5e0!3m2!1sen!2suk!4v1543525221478" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+
+  <div data-role="page" id="eventitem6" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+      <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>The Wedding Lounge</h1>
+        <h5>Catwalk</h5>
+        <h5>20/07/2019</h5>
+        <p style="text-align:left" align="center">A relaxed and interactive platform which will appeal to brides planning their wedding, sourcing for vendors or just looking for wedding inspirations and entertainment. Expect to meet our selected vendors who are happy to discuss everything about your special day.</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+Watergate St,
+London,
+SE8 3HR
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton5" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d209.29901896443238!2d-0.02639038122296393!3d51.481702100958685!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602f2f636367b%3A0x3ddda8164af5b627!2sWatergate+St%2C+London+SE8+3HR!5e0!3m2!1sen!2suk!4v1543525991523" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+      
+  <div data-role="page" id="eventitem7" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+    <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1 >UK Glamour Awards Christmas Party</h1>
+        <h5>Party</h5>
+        <h5>06/12/2018</h5>
+        <p style="text-align:left" align="center">Following 2 years of succesful UK Glamour Awards ceremonies, we are returning this December with the UK Glamour Awards Christmas Party. Come and party the night away with your favourite glamour stars at Spearmint Rhino, Tottenham Court Road, London.</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+Spearmint Rhino London,
+161 Tottenham Court Road,
+London,
+W1T 7NN
+
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton6" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.4519661940394!2d-0.13873308469101542!3d51.52326961736441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761b28dd9aa1c3%3A0xf9ed19a709d38a59!2sSpearmint+Rhino+London!5e0!3m2!1sen!2suk!4v1543610002396" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+      
+  <div data-role="page" id="eventitem8" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+  <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>London Runway Issue 30 Launch Party and Christmas Celebration</h1>
+        <h5>Party</h5>
+        <h5>06/12/2018</h5>
+        <p style="text-align:left" align="center"> London Runway are taking over the Lone Design Club Christmas pop-up for one night only. Be prepared for an evening of networking, two free drinks per ticket, sustainable and ethical fashion, and fabulous appearances from our friends and collaborators. We'll be covering the whole event for our next issue, too, so you're in with a chance of appearing in print! </p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p> 
+Lone Design Club pop-up,
+1 Denbigh Road,
+London,
+W11 2SJ
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton7" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.968210008078!2d-0.20315058469141797!3d51.5137992180569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48760fe2beb65ec7%3A0xf37dc3cbb823b5d2!2s1+Denbigh+Rd%2C+London+W11+2SJ!5e0!3m2!1sen!2suk!4v1543610352171" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem" id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+   
+  <div data-role="page" id="eventitem9" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+      <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>Burst: All White Party</h1>
+        <h5>Party</h5>
+        <h5>15/12/2018</h5>
+        <p style="text-align:left" align="center">
+            Its simple..we create unforgettable experiences..we make unimaginable memories... and we bring the entertainment each and every time!
+
+All roads lead to Mayfair to end our year of Parties as we get Burst at Loop, for our All Whte Party Chirstmas </p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+            
+The Loop,
+19 Dering Street,
+London,
+W1S 1AH
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton8" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.9513779885096!2d-0.1476652846913733!3d51.51410801803439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052b46449fc1%3A0x4967059b58f6e03!2sThe+Loop!5e0!3m2!1sen!2suk!4v1543610463923" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem " id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+   </div>   
+      
+  <div data-role="page" id="eventitem10" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+      <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>Nakshi Fashion Week 2018</h1>
+        <h5>Gallery</h5>
+        <h5>21/03/2019</h5>
+        <p style="text-align:left; margin-left: 1rem" align="center">
+    We are delighted to bring together East +  West Fashion world together to promote:
+sustainable, eco-friendly, socially conscious, handloom fashion.
+        Two-day Event along Catwalk Runway, Designer Showroom, Fashion Exhibitions, Fashion Film Screening and live entertainment.</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+The Nehru Center,
+8 S Audley St, Mayfair,
+London,
+W1K 1HF
+
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton9" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.301990192584!2d-0.15301648469165674!3d51.50767541850468!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876052e45873a05%3A0xe115e5986b60ef!2sThe+Nehru+Centre!5e0!3m2!1sen!2suk!4v1543610686036" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem " id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div>
+     
+  <div data-role="page" id="eventitem11" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+      <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1 >Tres Rasche pop up Party + Presentation</h1>
+        <h5>Gallery</h5>
+        <h5>30/11/2018</h5>
+        <p style="text-align:left" align="center"> What? Tres Rasche pop up Party + Presentation. Hosted + styled by: Betsy Johnson.
+Where? Protein Studios. Wheen? Friday 30th November 2018. 7-11PM.</p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+            Protein Studios,
+            31 New Inn Yard,
+            London,
+            EC2A 3EY
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton10" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.377852514724!2d-0.08061368469093445!3d51.52462911726504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cb096ccbad3%3A0x1e756378641e77fb!2sProtein+Studios!5e0!3m2!1sen!2suk!4v1543610841773" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem " id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+      </div>
+      </div>
+      </div>
+    </div> 
+      
+  <div data-role="page" id="eventitem12" data-quicklinks="true" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+        text</a>
+    </div>
+
+    <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+
+    </div>
+
+  <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
+      <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
+        <h1>Kryptik Clothing Launch Party</h1>
+        <h5>Gallery</h5>
+        <h5>01/12/2018</h5>
+        <p style="text-align:left" align="center"> Kryptik finds meaning by making it. It's been our mission to find young individuals with a burning passion for life and give them the platform they need to ignite their talent. Fashion lets us wear purpose, we can demonstrate our views and send a message. Our message is to get busy and stay foolish. To understand more come along for an unforgettable evening filled with live performances from some of London’s fiercest talent in the music scene. </p>
+          <p style="text-align:left" align="center">Location:</p>
+        <p>
+            The Front Room,
+            37 - 39 Saint George's Walk,
+            Croydon,
+            CR0 1YL
+
+</p>
+          
+        <div style="max-width:175px;margin-bottom:0.5rem;">
+<button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button id="customButton11" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
+        </div>
+        </div>
+<!--Student 1 - Backend Form and Payment-->
+<script src="https://checkout.stripe.com/checkout.js"></script>
+
+<script>
+var token_triggered = false;
+var minimum = 5
+var maximum = 25
+var payment_amount = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
+var discount_active = true;//TODO make this into session or something
+if(discount_active){
+  payment_amount = payment_amount-(payment_amount*0.20)
+}
+var handler = StripeCheckout.configure({
+  key: 'pk_test_TYooMQauvdEDq54NiTphI7jx',
+  image: 'https://stripe.com/img/documentation/checkout/marketplace.png',
+  locale: 'auto',
+  currency: 'GBP',
+  token: function(token) {
+    token_triggered = true;
+    // You can access the token ID with `token.id`.
+    // Get the token ID to your server-side code for use.
+  },
+  closed: function() 
+      { 
+        if(token_triggered)
+        {
+          window.location.href='ticket_item.html';
+        }
+      }
+  });
+
+document.getElementById('customButton').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Extraordinary',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton1').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Swimwear and Lingerie Fashion Show',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton2').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'London Fashion Week // OFS AW19',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton3').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'SMGlobal Catwalk - LONDON FASHION WEEK (Season 5)',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton4').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'SMGlobal Catwalk - LONDON FASHION WEEK (Season 4)',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton5').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'The Wedding Lounge',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton6').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'UK Glamour Awards Christmas Party',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton7').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'London Runway Issue 30 Launch Party and Christmas Celebration',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton8').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Burst: All White Party',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton9').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Nakshi Fashion Week 2018',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton10').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Tres Rasche pop up Party + Presentation',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+document.getElementById('customButton11').addEventListener('click', function(e) {
+  // Open Checkout with further options:
+  handler.open({
+    name: 'Kryptik Clothing Launch Party',
+    description: 'Westminster Fashion Week',
+    zipCode: false,
+    amount: payment_amount
+  });
+  e.preventDefault();
+});
+
+// Close Checkout on page navigation:
+window.addEventListener('popstate', function() {
+  handler.close();
+});
+</script>
+        
+
+      <div data-role="footer" style="background-color: #F4F4F4;">
+        
+        <p style=" text-align: center">Location</p>
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2490.637415550068!2d-0.10071928469715101!3d51.37296202834549!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487607340898345f%3A0xe9eb6c570e5fe28c!2sThe+Front+Room!5e0!3m2!1sen!2suk!4v1543610956406" width="450" height="250" frameborder="0" style="border:0; margin-left: 10rem; margin-right: 4rem; margin-bottom: 1rem; margin-top: 1rem " id="map"></iframe>
+          <div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+</div>  
+ 
+        <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem; text-align: center;">Westminster Fashion Week © 2018</h1>
+          </div>
+      </div>
+      </div>
+    </div>
+    
+
+      
   </body>
 </html>
