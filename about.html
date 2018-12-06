@@ -4,44 +4,75 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Westminster Fashion Show</title>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="custom_css/main.css">
     <link rel = "stylesheet" href = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <link rel="stylesheet" href="ionicons.min.css">
     <script src = "https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src = "https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+          <script type="text/javascript">
+    $(document).ready(function () {
+        $(window).resize(function(){
+              //iphonePortraitResize();
+              //iphoneLandscapeResize();              
+});
+              //iphonePortraitResize();
+    //iphoneLandscapeResize();
+$(window).load(function(){
+              //iphonePortraitResize();
+    //iphoneLandscapeResize();
+});
+        function iphonePortraitResize(){
+            if(window.innerWidth == 400 || window.outerWidth == 400){
+                $("#mover").css("margin-left","20px");
+                 $("#third").css("margin-left","21px");
+                $("#fourth").css("margin-left","21px");
+            }
+        }
+        
+        function iphoneLandscapeResize(){
+                 if(window.innerWidth == 667 || window.outerWidth == 667){
+                $("#mover").css("margin-left","66px");
+                $("#third").css("margin-left","21px");
+                $("#fourth").css("margin-left","21px");
+            }
+        }
+ 
+    });
+</script>
 </head>
+   <body>
+    <div data-role="page" id="events" data-quicklinks="true" style="background-color:#F4F4F4;">
+      <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+        <ul data-role="listview">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="favourites.html">Favourites</a></li>
+          <li><a href="aboutUs.html">About Us</a></li>
+          <li><a href="qr.html">QR</a></li>
+          <li><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+        </ul>
+      </div>
 
-<body>  
+      <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+        <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
+        <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+        <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">No
+          text</a>
+      </div>
 
-  <div id="about" data-role="page" data-quicklinks="true">
-<!--Header Section-->
-    <div data-role="header" style="background-color: #F4F4F4;">
-      <img src="logo_80x94.png" alt="" style="width: 50px; padding: 14px;">
-      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1> <div data-role="button" style="background-color: #F4F4F4;
-    display: inline-block;
-    float: right;
-    margin: 5px 10px 0 0;
-    position: absolute;
-    left: 170px;
-    top: 28.5px;
-    bottom: 10px;">
-        <a id="n"  href="#main" style="text-decoration: none; color: #333333; font-weight: normal;">Home</a>
-        <a id="o"  href="#events" style="text-decoration: none; color: #333333; font-weight: normal; ">Events</a>
-        <a id="r"  href="#designers" style="text-decoration: none; color: #333333; font-weight: normal; ">Designers</a>
-        <a id="d"  href="#news" style="text-decoration: none; color: #333333; font-weight: normal; ">News</a>
-        <a id="i"  href="" style="text-decoration: none; color: #333333; font-weight: normal; ">About Us</a>
-        <a id="c"  href="" style="text-decoration: none; color: #48c988; font-weight: normal; ">Sign In</a>
-    </div>
-    </div>
+     <div data-role="main" class="ui-content jqm-content" style="padding: 0;">
+     </div>
+   
 <!--Main Section-->
-      <div id="catwalk" data-filter="true" data-input="#filterBasic-input">
-     <div class="ui-grid-c" style="box-sizing: border-box;">
+       <br><br><br>
+     <div class="about-container" style="box-sizing: border-box;">
 		<div style="margin-left: 20px;
     margin-right: -32px;
     width: 18em;
     border-style:dotted;" class="ui-block-a">
     		<div class="card">
-		<img class="centerimg" src="Cyril.png">
+		<img class="centerimg" src="assets/images/Cyril.png">
 		<h2 id="headers"> Cyril Asomani</h2>
                <p style="text-transform: uppercase; font-weight: bold;
                letter-spacing: 2px;
@@ -55,9 +86,10 @@
                    <a id="EmailButton" data-rel="popup" data-position-to="window" data-transition="pop" href="mailto:allofficials.ca@gmail.com?Subject=Hello%20Cyril">Email Cyril</a></button>
     </div>
 		</div>
+        
 		<div id="mover" class="ui-block-b" style="box-sizing: border-box;">
 		<div class="card">
-		<img class="centerimg" src="Andreas.jpg">
+		<img class="centerimg" src="assets/images/Andreas.jpg">
 		<h2 id="header"> Bror Nordstrom</h2>
                <p style="text-transform: uppercase; font-weight: bold;
                letter-spacing: 2px;
@@ -70,9 +102,10 @@
                    margin-left:86px; width: fit-content; align-content: center;" class="ui-btn"><a id="EmailButton" data-rel="popup" data-position-to="window" data-transition="pop" href="mailto:w1552186@my.westminster.ac.uk?Subject=Hello%20Bror">Email Bror</a></button>
     </div>
 		</div>
+         
 		<div id="third" class="ui-block-c" style="box-sizing: border-box;">
 		<div class="card">
-		<img class="centerimg" style="border-radius: 150px;" src="Tommy.jpeg">
+		<img class="centerimg" style="border-radius: 150px;" src="assets/images/Tommy.jpeg">
 		<h2 id="header" style="margin-left: auto;"> Tomasz Jurek</h2>
                <p style="text-transform: uppercase; font-weight: bold;
                letter-spacing: 2px;
@@ -85,9 +118,10 @@
                    margin-left:75px; width: fit-content; align-content: center;" class="ui-btn"><a id="EmailButton" data-rel="popup" data-position-to="window" data-transition="pop" href="mailto:w1576380@my.westminster.ac.uk?Subject=Hello%20Tomasz">Email Tomasz</a></button>
     </div>
 		</div>
-		<div id="third" class="ui-block-d" style="box-sizing: border-box;">
+
+		<div id="fourth" class="ui-block-d" style="box-sizing: border-box;">
 		<div class="card">
-		<img class="centerimg" style="border-radius: 150px;" src="Steven.jpeg">
+		<img class="centerimg" style="border-radius: 150px;" src="assets/images/Steven.jpeg">
 		<h2 id="header" style="margin-left: auto;"> Steven Siht</h2>
                <p style="text-transform: uppercase; font-weight: bold;
                letter-spacing: 2px;
@@ -100,26 +134,16 @@
                    margin-left:78px; width: fit-content; align-content: center;" class="ui-btn"><a id="EmailButton" data-rel="popup" data-position-to="window" data-transition="pop" href="mailto:w1616792@my.westminster.ac.uk?Subject=Hello%20Steven">Email Steven</a></button>
     </div>
 		</div>
-	</div>
       </div>
-<!--Footer Section      -->
-<div data-role="footer-basic" style="background-color: #f4f4f4; padding: 30px;">     
-<div class="center-div">
-<img src="logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-<img src="logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
-<img src="logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
-<img src="logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<div data-role="footer-basic" style="background-color: #f4f4f4; padding: 0px 0px;">     
+    <div class="center-div">
+<img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+<img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+<img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
 </div>  
-</div>
-      
-    <div id="CenterFooter" data-role="button" style="background-color: #F4F4F4;">
-        <a id="n"  href="#main" style="text-decoration: none; color: #333333; font-weight: normal;">Home</a>
-        <a id="o"  href="#events" style="text-decoration: none; color: #333333; font-weight: normal; ">Events</a>
-        <a id="r"  href="" style="text-decoration: none; color: #333333; font-weight: normal; ">Designers</a>
-        <a id="d"  href="" style="text-decoration: none; color: #333333; font-weight: normal; ">News</a>
-        <a id="i"  href="" style="text-decoration: none; color: #333333; font-weight: normal; ">About Us</a>
-      <h1 style="font-size: 13px; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
-    </div>
-  </div>
+ 
+       </div>
+         </div>
     </body>
 </html>

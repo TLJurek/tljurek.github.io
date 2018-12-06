@@ -329,3 +329,107 @@ img {
         height: 400px;
         background-color: grey;
       }
+.card{
+     position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #111133;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    width: inherit;
+    max-width: 286px;
+}
+
+
+
+#headers{
+    color:#dddddd;
+margin-left: 55px;
+    margin-right: auto;
+    font-size: 1.75rem;
+}
+.centerimg{
+    padding-top: 35px;
+/*    padding-left: 20px;*/
+    border-top-left-radius: calc(.25rem - 1px);
+    border-top-right-radius: calc(.25rem - 1px);
+    width: inherit;
+}
+#mover{
+    margin-left: 21px;
+    margin-right: auto;
+    width: 18em;
+    border-style:dotted;
+}
+#third{
+     margin-left: 21px;
+    margin-right: auto;
+    width: 18em;
+    border-style:dotted;
+}
+#header{
+    color:#dddddd;
+margin-left: 40px;
+    margin-right: auto;
+    font-size: 1.75rem;
+}
+#EmailButton{
+        text-decoration: none;
+    color: black;
+    font-family: Open Sans;
+    padding: 0px;
+}
+
+#fourth{
+
+     margin-left: 21px;
+    margin-right: auto;
+    width: 18em;
+    border-style:dotted;
+}
+.about-container {
+  display: grid;
+  grid-template-columns: 0.11fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "." "." "." ".";
+}
+
+
+@media screen and (min-width: 380px){
+.about-container {
+  display: grid;
+  grid-template-columns: 0.11fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "." "." "." ".";
+}
+}
+
+@media screen and (min-width: 736px){
+.about-container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". ." ". .";
+}
+}
+@media screen and (min-width: 768px){
+    .about-container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". ." ". .";
+}
+}
+@media screen and (min-width: 1024px){
+.about-container {
+  display: grid;
+  grid-template-columns: 0.2fr 0.2fr 0.2fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: ". . ." ". . .";
+}
+}
