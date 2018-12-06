@@ -2,90 +2,52 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WFW_v2</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="assets/css/Article-Dual-Column.css">
-    <link rel="stylesheet" href="assets/css/Article-List.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Form---Wizard.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/Map-Clean.css">
-    <link rel="stylesheet" href="assets/css/MUSA_form-wizard.css">
-    <link rel="stylesheet" href="assets/css/MUSA_form-wizard.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
-    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Team-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Testimonials.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  
+  <link rel="stylesheet" href="custom_css/main.css">
+  <title>QR Reader - Westminster Fashion Week</title>
 </head>
+<body>
+  <div data-role="page" id="qr" style="background-color:#F4F4F4;">
 
-<body style="background-color:#f4f4f4;">
-    <div>
-        <nav class="navbar navbar-light navbar-expand-lg sticky-top navigation-clean" style="background-color:#f4f4f4;">
-            <div class="container"><a class="navbar-brand" href="#" style="color:#333333;font-weight:normal;font-size:32px;"><img src="assets/img/logo_50x59.png">&nbsp;WFW</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse mt-3" id="navcol-1" style="color:#f4f4f4;max-width:100%;">
-                    <ul class="nav navbar-nav ml-auto"></ul>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item flex-column" role="presentation"><a class="nav-link" href="index.html" style="color:#333333;font-weight:normal;font-style:normal;">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="events.html" style="color:#333333;">Events</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="news.html" style="color:#333333;">News</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="favourites.html" style="color:#333333;">Favourites</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="aboutus.html" style="color:#333333;">About Us</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link mb-3" href="qr.html" style="color:#333333;background-color:#dddddd;">QR</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link mb-3" href="signin.html" style="color:#48c988;">Sign In</a></li>
-                    </ul>
-            </div>
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
     </div>
-    </nav>
+
+    <!-- Header with logo and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;" />
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
     </div>
-    <div class="highlight-clean" style="font-family:'Open Sans', sans-serif;background-color:#f4f4f4;">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center">QR Reader</h2>
-                <p class="text-center">Scan QR marker to get more information about events, news, designers or to buy tickets directly at the event.</p>
-            </div>
-            <div class="d-flex justify-content-around" style="margin-bottom:1rem;"><img src="assets/img/shopify-faae7065b7b351d28495b345ed76096c03de28bac346deb1e85db632862fd0e4.png" style="/*margin-left:aut;*/"></div>
-            <div class="buttons"><a class="btn btn-primary" role="button" href="#" style="background-color:#48c988;">Scan code</a></div>
-        </div>
+
+    <!--Content of QR Page-->
+    <div role="main" class="ui-content">
     </div>
-    <div class="footer-basic" style="background-color:#f4f4f4;color:#333333;">
-        <footer>
-            <div class="social" style="color:#333333;"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline"
-                style="font-size:15px;color:#333333;">
-                <li class="list-inline-item"><a href="#" style="font-size:15px;">Home</a></li>
-                <li class="list-inline-item"><a href="#">Events</a></li>
-                <li class="list-inline-item"><a href="#">Designers</a></li>
-                <li class="list-inline-item"><a href="#">News</a></li>
-                <li class="list-inline-item"><a href="#">About Us</a></li>
-            </ul>
-            <p class="copyright">Westminster Fashion Week © 2018</p>
-        </footer>
+
+    <!--Footer Content-->
+    <div data-role="footer" style="background-color: #f4f4f4; padding: 40px 0px;">
+    <div class="center-div">
+      <img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+      <img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-animation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <script src="assets/js/MUSA_form-wizard.js"></script>
+</div>
+</div>
 </body>
-
 </html>
+<!-- Created by Steven Siht W1616792 (Student 3) -->

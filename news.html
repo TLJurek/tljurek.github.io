@@ -2,116 +2,529 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WFW_v2</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" href="assets/css/Article-Dual-Column.css">
-    <link rel="stylesheet" href="assets/css/Article-List.css">
-    <link rel="stylesheet" href="assets/css/Features-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/Footer-Clean.css">
-    <link rel="stylesheet" href="assets/css/Form---Wizard.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Blue.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Clean.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/Lightbox-Gallery.css">
-    <link rel="stylesheet" href="assets/css/Login-Form-Clean.css">
-    <link rel="stylesheet" href="assets/css/Map-Clean.css">
-    <link rel="stylesheet" href="assets/css/MUSA_form-wizard.css">
-    <link rel="stylesheet" href="assets/css/MUSA_form-wizard.css">
-    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
-    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
-    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Team-Boxed.css">
-    <link rel="stylesheet" href="assets/css/Testimonials.css">
-    <link rel="stylesheet" href="assets/css/untitled.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <link rel="stylesheet" href="custom_css/main.css">
+  <title>News - Westminster Fashion Week</title>
+  <script type="text/javascript">// Initialize and add the map
+    function initMap() {
+      // The location of The Store
+      var store = {lat: 51.512458, lng: -0.114980};
+      var spencer = {lat: 51.505389, lng: -0.140134};
+      var browns = {lat: 51.525121, lng: -0.074222};
+      var belvedere = {lat: 51.513916, lng: -0.132236}
+      // The map, centered at The Store
+      var map = new google.maps.Map(
+          document.getElementById('map'), {zoom: 12, center: store});
+      // The markers
+      var marker = new google.maps.Marker({position: store, map: map});
+      var marker2 = new google.maps.Marker({position: spencer, map: map});
+      var marker3 = new google.maps.Marker({position: browns, map: map});
+      var marker4 = new google.maps.Marker({position: belvedere, map: map});
+    }</script> 
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCX0f63ZFfYtMrOe655E9KVUxhumrRQxIY&callback=initMap"></script>
 </head>
 
-<body style="background-color:#f4f4f4;font-family:'Open Sans', sans-serif;">
-    <div>
-        <nav class="navbar navbar-light navbar-expand-lg sticky-top navigation-clean" style="background-color:#f4f4f4;">
-            <div class="container"><a class="navbar-brand" href="#" style="color:#333333;font-weight:normal;font-size:32px;"><img src="assets/img/logo_50x59.png">&nbsp;WFW</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                <div
-                    class="collapse navbar-collapse mt-3" id="navcol-1" style="color:#f4f4f4;max-width:100%;">
-                    <ul class="nav navbar-nav ml-auto"></ul>
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item flex-column" role="presentation"><a class="nav-link" href="index.html" style="color:#333333;font-weight:normal;font-style:normal;">Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="events.html" style="color:#333333;">Events</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="news.html" style="color:#333333;background-color:#dddddd;">News</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="favourites.html" style="color:#333333;">Favourites</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="aboutus.html" style="color:#333333;">About Us</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link mb-3" href="qr.html" style="color:#333333;">QR</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link mb-3" href="signin.html" style="color:#48c988;">Sign In</a></li>
-                    </ul>
-            </div>
+<body>
+  <style>
+    .wrap {
+      white-space: normal !important;
+      overflow: visible;
+    }
+    #map {
+        width: 100%;
+        height: 400px;
+        background-color: grey;
+      }
+  </style>
+
+  <!-- News list page-->
+  <div data-role="page" id="news" style="background-color:#F4F4F4;">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
     </div>
-    </nav>
+
+    <!-- Header with logo and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4;" data-position="fixed" data-fullscreen="false">
+      <img src="assets/images/logo_80x94.png" alt="" style="width: 50px; padding: 14px;" />
+      <h1 style="display:inline-block; font-size: 32px; font-weight: normal; margin-left: 0;">WFW</h1>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
     </div>
-    <div style="margin-right:1rem;margin-top:0.5rem;margin-left:1rem;">
-        <h1 class="text-center" style="color:#333333;">News</h1>
-        <p class="text-center" style="color:#333333;">Latest news about Westminster Fashion Week.</p>
+
+    <!--Content of News Page-->
+    <div role="main" class="ui-content">
+      <h1 style="text-align: center; font-weight: normal;">News</h1>
+      <p style="text-align: center;">Latest news about Westminster Fashion Week.</p>
+
+      <ul id="news-list" data-role="listview" data-inset="true">
+        <li data-icon="false">
+          <img src="assets/images/news/news_1.jpeg" style="margin: 6px;">
+          <h2 class="wrap">THE QUEEN AT WESTMINSTER FASHION WEEK</h2>
+          <p>23 November 2018</p>
+          <p style="font-size: 16px;" class="wrap">Today, Her Majesty The Queen visited Westminster Fashion Week
+            to present the inaugural Queen Elizabeth
+            II Award for British Design.</p>
+          <fieldset class="ui-grid-a">
+            <a href="#news1" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+              More</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+          </fieldset>
+        </li>
+        <li data-icon="false">
+          <img src="assets/images/news/news_2.jpeg" style="margin: 6px;">
+          <h2 class="wrap">FASHION SWITCH TO GREEN CAMPAIGN BACKED BY THE MAYOR OF LONDON LAUNCHES
+            AT WESTMINSTER FASHION WEEK</h2>
+          <p>15 November 2018</p>
+          <p style="font-size: 16px;" class="wrap">The British Fashion Council, Dame Vivienne Westwood and the
+            Mayor of London have joined forces in a campaign to bring the fashion industry together to lead in
+            ambitious climate action, for a safer and greener future.</p>
+          <fieldset class="ui-grid-a">
+            <a href="#news2" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+              More</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+          </fieldset>
+        </li>
+        <li data-icon="false">
+          <img src="assets/images/news/news_3.jpeg" style="margin: 6px;">
+          <h2 class="wrap">WESTMINSTER FASHION WEEK FEBRUARY 2018 IS A CITY-WIDE CELEBRATION</h2>
+          <p>10 October 2018</p>
+          <p class="wrap" style="font-size: 16px;">Westminster Fashion Week is a city-wide celebration of
+            individualism, openness and diversity.</p>
+          <fieldset class="ui-grid-a">
+            <a href="#news3" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+              More</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+          </fieldset>
+        </li>
+        <li data-icon="false">
+          <img src="assets/images/news/news_4.jpeg" style="margin: 6px;">
+          <h2 class="wrap">WHAT'S ON AT WESTMINSTER FASHION WEEK SEPTEMBER 2018</h2>
+          <p>30 September 2018</p>
+          <p class="wrap" style="font-size: 16px;">Westminster Fashion Week starts this week and more than ever there
+            are ways for the public to get involved from digital engagement to events across the city.</p>
+          <fieldset class="ui-grid-a">
+            <a href="#news4" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+              More</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+          </fieldset>
+        </li>
+        <li data-icon="false">
+          <img src="assets/images/news/news_5.jpeg" style="margin: 6px;">
+          <h2 class="wrap">INTERNATIONAL FASHION SHOWCASE 2017 WINNERS ANNOUNCED</h2>
+          <p>15 January 2018</p>
+          <p class="wrap" style="font-size: 16px;">The British Council, BFC and Mercedes-Benz today announced the
+            winners of the International Fashion Showcase, in a prize-giving ceremony at Somerset House.</p>
+          <fieldset class="ui-grid-a">
+            <a href="#news5" class="ui-btn ui-btn-inline ui-mini" style="background-color: #48C988;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Read
+              More</a>
+            <a href="#" class="ui-btn ui-btn-inline ui-mini ui-icon-heart ui-btn-icon-left" style="background-color: #e90052;color: #f3f3f3;border-radius: 10px;text-shadow: none;">Favourite</a>
+          </fieldset>
+        </li>
+      </ul>
     </div>
-    <div class="article-list" style="background-color:#f4f4f4;">
-        <div class="container" style="color:#f4f4f4;">
-            <div class="row articles">
-                <div class="col-sm-6 col-md-4 item" style="background-color:#111133;margin-bottom:0.5rem;padding-bottom:15px;"><a href="#"><img class="img-fluid" src="assets/img/lfw3.jpg"></a>
-                    <h3 class="name">News Item 1</h3>
-                    <p class="description" style="color:#f4f4f4;">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    <div class="d-inline-flex" style="padding-top:1rem;"><a class="btn btn-primary" role="button" href="/news-item.html" style="background-color:#48c988;border-color:#48c988;">Read More</a><i class="material-icons float-right" style="color:#e90052;font-size:36px;">favorite_border</i></div>
-                </div>
-                <div class="col-sm-6 col-md-4 item" style="margin:0;background-color:#111133;margin-bottom:0.5rem;padding-bottom:15px;"><a href="#"><img class="img-fluid" src="assets/img/lfw1.jpg"></a>
-                    <h3 class="name">News Item 2</h3>
-                    <p class="description" style="color:#f4f4f4;">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    <div class="d-inline-flex" style="padding-top:1rem;"><button class="btn btn-primary" type="button" data-toggle="collapse" href="#collapse-news" style="background-color:#48c988;border-color:#48c988;">Read More</button><i class="material-icons float-right" style="color:#e90052;font-size:36px;">favorite</i></div>
-                </div>
-                <div class="col-sm-6 col-md-4 item" style="margin:0;background-color:#111133;margin-bottom:0.5rem;padding-bottom:15px;"><a href="#"><img class="img-fluid" src="assets/img/lfw2.jpg"></a>
-                    <h3 class="name">News Item 3</h3>
-                    <p class="description" style="color:#f4f4f4;">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    <div class="d-inline-flex" style="margin-top:1rem;"><button class="btn btn-primary" type="button" data-toggle="collapse" href="#collapse-news" style="background-color:#48c988;border-color:#48c988;">Read More</button><i class="material-icons float-right" style="color:#e90052;font-size:36px;">favorite_border</i></div>
-                </div>
-                <div class="col-sm-6 col-md-4 item" style="margin:0;background-color:#111133;margin-bottom:0.5rem;padding-bottom:15px;"><a href="#"><img class="img-fluid" src="assets/img/lfw5.jpg"></a>
-                    <h3 class="name">News Item 4</h3>
-                    <p class="description" style="color:#f4f4f4;">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    <div class="d-inline-flex" style="margin-top:1rem;"><button class="btn btn-primary" type="button" data-toggle="collapse" href="#collapse-news" style="background-color:#48c988;border-color:#48c988;">Read More</button><i class="material-icons float-right" style="color:#e90052;font-size:36px;">favorite_border</i></div>
-                </div>
-                <div class="col-sm-6 col-md-4 item" style="margin:0;background-color:#111133;margin-bottom:0.5rem;padding-bottom:15px;"><a href="#"><img class="img-fluid" src="assets/img/lfw3.jpg"></a>
-                    <h3 class="name">News Item 5</h3>
-                    <p class="description" style="color:#f4f4f4;">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p>
-                    <div class="d-inline-flex" style="margin-top:1rem;"><button class="btn btn-primary" type="button" data-toggle="collapse" href="#collapse-news" style="background-color:#48c988;border-color:#48c988;">Read More</button><i class="material-icons float-right" style="color:#e90052;font-size:36px;">favorite_border</i></div>
-                </div>
-            </div>
-        </div>
+
+    <!--Footer Content-->
+    <div data-role="footer">
+      <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Home</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Events</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Designers</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">News</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">About Us</a>
+      </div>
+      <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
     </div>
-    <div></div>
-    <div class="footer-basic" style="background-color:#f4f4f4;color:#333333;">
-        <footer>
-            <div class="social" style="color:#333333;"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline"
-                style="font-size:15px;color:#333333;">
-                <li class="list-inline-item"><a href="#" style="font-size:15px;">Home</a></li>
-                <li class="list-inline-item"><a href="#">Events</a></li>
-                <li class="list-inline-item"><a href="#">Designers</a></li>
-                <li class="list-inline-item"><a href="#">News</a></li>
-                <li class="list-inline-item"><a href="#">About Us</a></li>
-            </ul>
-            <p class="copyright">Westminster Fashion Week © 2018</p>
-        </footer>
+  </div>
+
+  <!-- News item 1 page-->
+  <div data-role="page" id="news1">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
     </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-animation.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <script src="assets/js/MUSA_form-wizard.js"></script>
+
+    <!-- Header with back button and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4; height: 6rem;" data-position="fixed">
+      <a href="#news" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">Icon
+        only</a>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
+    </div>
+
+    <!--Content of News Item-->
+    <div role="main" class="ui-content">
+      <img src="assets/images/news/news_1_large.jpeg" alt="" style="text-align: center; max-width: 100%;">
+      <h1>THE QUEEN AT WESTMINSTER FASHION WEEK</h1>
+      <p>23 November 2018</p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        Today, Her Majesty The Queen visited Westminster Fashion Week to present the inaugural Queen Elizabeth II Award
+        for British Design.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        Her Majesty was greeted upon arrival at Westminster Fashion Week by Caroline Rush CBE, Chief Executive of the
+        British Fashion Council (BFC). The Queen toured the Designer Showrooms to view the collections and met
+        Headonism and Rock Vault designers Completedworks, DAOU, Frances Wadsworth Jones, Harvey Santos, Lily Kamper,
+        Rachel Boston, Shimell and Madden and The Season Hats. Her Majesty was then introduced by Sarah Mower MBE, BFC
+        Ambassador for Emerging Talent to a group of NEWGEN designers including Ben Cottrell, Charles Jeffrey, Grace
+        Wales Bonner, Liam Hodges, Marta Jakubowski, Matthew Dainty, Michael Halpern, Nicholas Daley, Paula Knorr,
+        Phoebe English, Richard Malone and Sadie Williams.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        Her Majesty then attended Richard Quinn's runway show before presenting him with The Queen Elizabeth II Award
+        for British Design. The Award, initiated in recognition of the role the fashion industry plays in society and
+        diplomacy, will be awarded annually to an emerging British fashion designer who shows exceptional talent and
+        originality, whilst demonstrating value to the community and/or strong sustainable policies. The first
+        recipient of the Award is British fashion designer Richard Quinn.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        London born designer Richard Quinn established his namesake label in 2016 upon graduating from the Fashion MA
+        course at Central Saint Martins. Specialising in womenswear and textiles, his collections are bold and emotive
+        creating a forward thinking unafraid vision. Richard Quinn has been recognised for his exceptional prints and
+        for his ability to combine unique handcrafted skill with a refined high fashion sensibility. Already supplying
+        leading stores around the world, Richard's ethos of collaboration goes beyond his design business to include
+        the creation of a print studio which offers high quality, accessible services to students and his peer group of
+        emerging designers.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The Queen Elizabeth II Award for British Design has been designed by Her Majesty's Personal Advisor, Ms Angela
+        Kelly, who has orchestrated The Queen's wardrobe for the past 26 years.
+      </p>
+    </div>
+
+    <!--Footer Content-->
+    <div data-role="footer">
+      <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Home</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Events</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Designers</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">News</a>
+        <a href="" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">About Us</a>
+      </div>
+      <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
+    </div>
+  </div>
+
+  <!-- News item 2 page-->
+  <div data-role="page" id="news2">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <!-- Header with back button and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4; height: 6rem;" data-position="fixed">
+      <a href="#news" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">Icon
+        only</a>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
+    </div>
+
+    <!--Content of News Item-->
+    <div role="main" class="ui-content">
+      <img src="assets/images/news/news_2_large.jpeg" alt="" style="text-align: center; max-width: 100%;">
+      <h1>FASHION SWITCH TO GREEN CAMPAIGN BACKED BY THE MAYOR OF LONDON LAUNCHES
+        AT WESTMINSTER FASHION WEEK</h1>
+      <p>15 November 2018</p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The British Fashion Council, Dame Vivienne Westwood and the Mayor of London have joined forces in a campaign to
+        bring the fashion industry together to lead in ambitious climate action, for a safer and greener future.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The campaign intends to be a catalyst for global change through collaboration, with brands already committed
+        including Christopher Raeburn, Child of the Jago, E.Tautz, Harvey Nichols, Kering, Marks & Spencer, Oliver
+        Spencer, Positive Luxury, Selfridges, Stella McCartney, steventai, Teatum Jones & Vivienne Westwood.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>Justine Simons, Deputy Mayor for Culture and the Creative Industries</b> commented: <i>Westminster Fashion
+          Week is the greatest fashion showcase in the world, and illustrates our city’s truly global appeal and
+          leadership in creativity and innovation. This Fashion Week, I’m delighted to see the industry also showing
+          wider leadership in the fight against climate change – bringing together culture and the environment, two of
+          the Mayor’s key priorities. </i>
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <i>At City Hall, we want the capital to become a zero-carbon city by 2050 and to achieve this, we need
+          Londoners and businesses to get on board. I’m proud to support Vivienne Westwood and the British Fashion
+          Council in their call to Switch to Green today – now is the fashion industry’s chance to make going green the
+          number-one trend this autumn.”</i>
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The Fashion SWITCH campaign encourages brands to commit to switching UK offices and retail stores to a green
+        energy supplier or to green energy tariff within the next three years. Transitioning energy usage into a
+        renewable source can play an integral part in reaching business sustainability goals and tackling climate
+        change, directly improving the health and wellbeing of our population and planet.
+      </p>
+    </div>
+
+    <!--Footer Content-->
+    <div data-role="footer">
+        <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
+            <a href="index.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Home</a>
+            <a href="events.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Events</a>
+            <a href="designers.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Designers</a>
+            <a href="news.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">News</a>
+            <a href="about.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">About Us</a>
+          </div>
+          <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
+    </div>
+  </div>
+
+  <!-- News item 3 page-->
+  <div data-role="page" id="news3">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <!-- Header with back button and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4; height: 6rem;" data-position="fixed">
+      <a href="#news" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">Icon
+        only</a>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
+    </div>
+
+    <!--Content of News Item-->
+    <div role="main" class="ui-content">
+      <img src="assets/images/news/news_3_large.jpeg" alt="" style="text-align: center; max-width: 100%;">
+      <h1>WESTMINSTER FASHION WEEK FEBRUARY 2018 IS A CITY-WIDE CELEBRATION</h1>
+      <p>10 October 2018</p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        London Fashion Week is a city-wide celebration of individualism, openness and diversity. Considered as a
+        melting pot for creativity and innovation, London’s fashion scene is one of the most exciting and diverse
+        globally. London Fashion Week and London Fashion Week Festival aim to explore and bring together the worlds of
+        fashion, art, music and tech by hosting an exciting mix of events, presentations and collaborations throughout
+        February. This season, there are many ways the public can get involved, from digital engagement, to events
+        across the city. All the below activities and events are open to the public.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>WESTMINSTER FASHION WEEK FESTIVAL</b><br>
+        <b>Thursday 22nd – Sunday 25th February</b><br>
+        <i>The Store Studios, 180 Strand, WC2R</i><br><br>
+        London Fashion Week Festival welcomes 14,000 people across four-days offering the ultimate fashion experience
+        to consumers; with curated shopping galleries from over 120 international and British brands, catwalk shows,
+        industry talks and style presentations. The event allows consumers to experience the atmosphere of London
+        Fashion Week in its official venue and gain insight into the fashion industry while giving designer brands the
+        opportunity to meet and build direct relationships with new customers.
+      </p><br>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>BEYOND HERITAGE WITH MULBERRY</b><br>
+        <b>Saturday 17th & Sunday 18th of February</b><br>
+        <i>Spencer House, London SW1A 1NR</i><br><br>
+        Mulberry will be hosting a series of public talks and workshops at Spencer House with Mulberry collaborators
+        who have a shared passion for craft, fashion and quality.
+        Talks will include leather demonstrations from Mulberry craftsmen, an introduction to millinery by Noel Stewart
+        and Hepple gin masterclasses led by artisan distiller Valentine Warner, among others.
+        Guests will also be able to visit the Spencer House retail pop-up space, experience tours of the stately home,
+        and enjoy the Mulberry Palm Room tea house.<br><br>
+        To reserve complimentary place and discover the full itinerary of events visit mulberry.com
+      </p><br>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>BROWNS EAST: POP SHOP BALLOONS</b><br>
+        <b>Until March 5th</b><br>
+        <i>Browns East, 21 Club Row, London E2 7EY</i><br><br>
+        Pop by Browns East to take in the sight of this fabulously eccentric installation, purchase a helium-inflated
+        balloon to take away with you, or place an order for delivery with the help of their in-store ambassadors. POP
+        SHOP BALLOONS will be available at Browns East only.
+      </p><br>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>CAFÉ BELVEDERE</b><br>
+        <b>Thursday 15th –Sunday 18th February</b><br><br>
+        <i>15 Bateman St, London, W1D 3AQ, Opening Times from 1pm to 10:30pm</i><br>
+        Belvedere will be hosting an intimate drop in Café during London Fashion Week, from Thursday 15th until Sunday
+        18th February. Belvedere is bringing the iconic cocktail – the Espresso Martini – back to its spiritual home of
+        Soho. Providing both style and substance for the ultimate fashion crowd and adding a new twist on a classic,
+        guests can preview the new Belvedere Espress, the fastest serve from a vintage inspired syphon. Café Belvedere
+        will also serve three beautiful interpretations created by Martin Hudak of The Savoy, all focusing on the power
+        of coffee and Belvedere vodka.
+      </p><br>
+
+      <div id="map"></div>
+    </div>
+
+    <!--Footer Content-->
+    <div data-role="footer">
+        <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
+            <a href="index.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Home</a>
+            <a href="events.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Events</a>
+            <a href="designers.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Designers</a>
+            <a href="news.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">News</a>
+            <a href="about.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">About Us</a>
+          </div>
+          <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
+    </div>
+  </div>
+
+  <!-- News item 4 page-->
+  <div data-role="page" id="news4">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <!-- Header with back button and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4; height: 6rem;" data-position="fixed">
+      <a href="#news" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">Icon
+        only</a>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
+    </div>
+
+    <!--Content of News Item-->
+    <div role="main" class="ui-content">
+      <img src="assets/images/news/news_4_large.jpeg" alt="" style="text-align: center; max-width: 100%;">
+      <h1>WHAT'S ON AT LONDON FASHION WEEK SEPTEMBER 2016</h1>
+      <p>30 September 2018</p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        Westminster Fashion Week starts this week and more than ever there are ways for the public to get involved from
+        digital engagement to events across the city, all the below activities and events are open to both the public
+        and those who work in the fashion industry.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>@WESTMINSTERFASHIONWEEK INSTAGRAM LIVE STORY TAKE OVER</b><br>
+        The British Fashion Council has recently launched the @WestminsterFashionWeek Instagram account and will be
+        premiering Live Stories at WFW with industry take overs including Marques’Almeida and WFW Sponsors TONI&GUY.
+        Make sure to follow @WestminsterFashionWeek on Instagram for updates ahead of and during the event
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>WFW LIVE STREAMING</b><br>
+        WFW was the first fashion week to create a digital schedule and this season will once again live stream the
+        catwalk shows on the schedule. Watch them online at xxx. For the first time this season Christopher Kane will
+        also be live streaming its show - visit ChristopherKane.com to subscribe for first access.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>OCEAN OUTDOOR</b><br>
+        The BFC will be taking LFW content nationwide, screening highlights to 20 outdoor screens across Birmingham,
+        Glasgow, Leeds, Liverpool, London, Manchester and Newcastle. This is made possible thanks to a partnership with
+        Ocean Outdoor.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        <b>CARNABY</b><br>
+        Carnaby has announced a host of activity to celebrate WFW from live streaming shows on its big screen to
+        workshops, special experiences and offers in stores as well as free beauty treatments in the Carnaby Pampervan
+        parked up on Ganton Street throughout Fashion Week. Grazia will also be hosting their Live From London issue
+        live from Carnaby Street. For full listings visit:
+        carnaby.co.uk/news-and-events/carnaby-westminster-fashion-week.
+      </p>
+    </div>
+
+    <!--Footer Content-->
+    <div data-role="footer">
+        <div style="font-size: 15px; margin: 1rem 10rem 1rem 10rem;">
+            <a href="index.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Home</a>
+            <a href="events.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Events</a>
+            <a href="designers.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">Designers</a>
+            <a href="news.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">News</a>
+            <a href="about.html" style="text-decoration: none; color: #333333; font-weight: normal; padding: 1rem;">About Us</a>
+          </div>
+          <h1 style="font-size: 13px; color: #aaa; margin-bottom: 1rem;">Westminster Fashion Week © 2018</h1>
+    </div>
+  </div>
+
+  <!-- News item 5 page-->
+  <div data-role="page" id="news5">
+    <!-- Left overlay menu panel with icons-->
+    <div data-role="panel" id="navPanel" data-display="overlay" style="background-color: #f4f4f4;">
+      <ul data-role="listview">
+        <li data-icon="home"><a href="index.html">Home</a></li>
+        <li data-icon="location"><a href="events.html">Events</a></li>
+        <li data-icon="info"><a href="news.html">News</a></li>
+        <li data-icon="heart"><a href="favourites.html">Favourites</a></li>
+        <li data-icon="grid"><a href="about.html">About Us</a></li>
+        <li data-icon="camera"><a href="qr.html">QR</a></li>
+        <li data-icon="user"><a href="signin.html" style="color: #48C988;">Sign In</a></li>
+      </ul>
+    </div>
+
+    <!-- Header with back button and menu panel toggle button-->
+    <div data-role="header" style="background-color: #F4F4F4; height: 6rem;" data-position="fixed">
+      <a href="#news" class="ui-btn ui-btn-inline ui-icon-carat-l ui-btn-icon-notext" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;">Icon
+        only</a>
+      <a href="#navPanel" class="ui-btn ui-icon-bars ui-btn-icon-notext ui-corner-all ui-btn-right" style="border-radius: .3125em; margin: 1.25rem; height: 45px; width: 45px;"></a>
+    </div>
+
+    <!--Content of News Item-->
+    <div role="main" class="ui-content">
+      <img src="assets/images/news/news_5_large.jpeg" alt="" style="text-align: center; max-width: 100%;">
+      <h1>INTERNATIONAL FASHION SHOWCASE 2017 WINNERS ANNOUNCED</h1>
+      <p>15 January 2018</p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The <b>International Fashion Showcase Country Award </b>was given to India for its exhibition ‘The Indian
+        Pastoralists’, with a special mention for the Chile and Czech Republic exhibitions.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The <b>International Fashion Showcase Curation Award </b>was presented to Wojciech Dziedzic and Agnieszka
+        Jacobson–Cielecka of Poland, with special mentions for Julie HJ Lee of Korea and Roxanne Chen of Taiwan.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        Winning country India was selected from 26 participating countries by a panel of industry experts. Its
+        presentation, organised by IMG Reliance, showcased the emerging talents of Ikai by Ragini Ahuja, Kaleekal,
+        Ka-Sha by Karishma Shahani Khan, P.E.L.L.A. and Antar-Agni by Ujjawal Dubey; and of Wasim Khan as exhibition
+        designer and Gautam Vazirani as curator.
+      </p>
+      <p style="font-size: 14px; line-height: 1.35; letter-spacing: 1.5px;">
+        The IFS is a series of specially-commissioned and curated fashion installations featuring work by emerging
+        designers from all over the world. The exhibition is arranged over 14 rooms, 13 of which represent a country.
+        There is one group installation, Next in Line, curated by Shonagh Marshall which features designers from nine
+        further nations. New to IFS 2017, in a dedicated area, Mercedes-Benz showcase five emerging designers from
+        Canada, China, Germany, Portugal and Ukraine who the brand supports through its International Designer Exchange
+        Programme (IDEP). The free, public exhibition continues until 21 February.
+      </p>
+    </div>
+
+    <!--Footer Content-->
+<div data-role="footer" style="background-color: #f4f4f4; padding: 40px 0px;">
+    <div class="center-div">
+      <img src="assets/icons/_ionicons_svg_logo-instagram.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <img src="assets/icons/_ionicons_svg_logo-snapchat.svg" alt="" style="width: 18px; height: 24px; padding: 1x;">
+      <img src="assets/icons/_ionicons_svg_logo-twitter.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+      <img src="assets/icons/_ionicons_svg_logo-facebook.svg" alt="" style="width: 18px; height: 24px; padding: 1px;">
+    </div>
+</div>
+</div>
+
 </body>
 
 </html>
+
+<!-- Created by Steven Siht W1616792 (Student 3) -->

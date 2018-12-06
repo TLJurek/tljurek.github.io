@@ -1,0 +1,166 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #111133;
+}
+
+.body-dark {
+  color: #333333;
+  font-size: 16px;
+  line-height: 1.5;
+
+}
+
+.body-white {
+  color: #f4f4f4;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.ui-page-theme-a {
+  text-shadow: none;
+}
+#n,
+#o,
+#r,
+#d,
+#i {
+  font-size: 12px;
+}
+
+#list li {
+  display: inline-block;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+
+}
+
+.button1 {
+  font-style: verdana;
+  font-size: 10px;
+  background-color: white;
+  color: black;
+  border: 0px solid black;
+}
+
+.button1:hover {
+  background: linear-gradient(cyan, deepskyblue);
+  color: white;
+}
+
+
+img.logo {
+  float: left;
+  height: 200px;
+  width: 250px;
+}
+
+.footer-basic .social>a {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 0 8px;
+  color: inherit;
+  opacity: 0.75;
+}
+
+.ion-social-instagram:before {
+  content: "\f351"
+}
+
+.center-div {
+  margin: 0 auto;
+  width: 100px;
+}
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.highlight-blue {
+  color: #fff;
+  background-color: #1e6add;
+  /*padding:50px 0;*/
+}
+
+.highlight-blue .intro {
+  font-size: 16px;
+  max-width: 500px;
+  margin: 0 auto 25px;
+}
+
+.text-center {
+  text-align: center;
+  color: #f4f4f4;
+}
+
+.highlight-blue .buttons {
+  text-align: center;
+}
+
+.highlight-blue .buttons .btn-primary,
+.highlight-blue .buttons .btn-primary:active {
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  border-radius: 1px;
+  color: #ebeff1;
+  box-shadow: none;
+  text-shadow: none;
+  padding: 14px 24px;
+  background: transparent;
+  transition: background-color 0.25s;
+  align-content: center;
+  font-size: 13px;
+}
+
+element.style {
+  padding: 50px 0;
+  /* width: 110%; */
+  background-color: rgba(51, 51, 51, 0.8);
+  max-width: 1200px;
+  margin-right: 1rem;
+}
+
+.ui-panel {
+  width: 17em;
+  max-height: none;
+  border-width: 0;
+  position: absolute;
+  top: 0;
+  display: block;
+}
+
+.article .list {
+  color: #313437;
+  background-color: #fff
+}
+
+.ui-li:last-child, .ui-li.ui-field-contain:last-child {
+  border-bottom: none !important;
+}
+
+/* Student 3 CSS - News */
+.readmore {
+  background-color: #48C988;
+  color: #f3f3f3;
+  border-radius: 10px;
+  text-shadow: none;
+}
