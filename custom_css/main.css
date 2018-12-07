@@ -433,3 +433,10 @@ margin-left: 40px;
   grid-template-areas: ". . ." ". . .";
 }
 }
+#FavHeader{
+    color:black;
+}
+/*Favourites CSS*/
+#showone,#showtwo,#showthree,#catwalkone,#catwalktwo,#catwalkthree,#partyone,#partytwo,#partythree,#galleryone,#gallerytwo,#gallerythree,#newsone,#newstwo,#newsthree,#newsfour,#newsfive,#newssix{
+    display:none;
+}

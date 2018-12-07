@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="custom_css/main.css">
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="Favourrites.js"></script>
       <script type="text/javascript">
     $(document).ready(function () {
         $(window).resize(function(){
@@ -220,7 +221,7 @@ $(window).load(function(){
 
     <div style="height:auto; width:100%;  background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>Inspiring Edge Fashion Show</h1>
+        <h1 id="oneshow">Inspiring Edge Fashion Show</h1>
         <h5>Fashion Show</h5>
         <h5>09/12/2018</h5>
         <p style="text-align:left" align="center">Embrace U Empire presents Inspiring Edge Fashion Show 2018. Brining you an astounding collective of Creatives to blow you off your seats!</p>
@@ -233,8 +234,9 @@ N17 8DX
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem1" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a>
+</button>
+          <button id="oneshowbutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -286,7 +288,7 @@ N17 8DX
 
    <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>Swimwear and Lingerie Fashion Show</h1>
+        <h1 id="twoshow">Swimwear and Lingerie Fashion Show</h1>
         <h5>Fashion Show</h5>
         <h5>09/12/2018</h5>
         <p style="text-align:left" align="center">On Sunday 9th December, Bedfordshire Fashion week presents a stylish evening of runway show featuring emerging and established designers of lingerie, swimwear, resort wear and more.
@@ -300,8 +302,8 @@ Luton, LU1 3BE
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem2" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="twoshowbutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton1" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -353,7 +355,7 @@ Luton, LU1 3BE
 
   <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>London Fashion Week // OFS AW19</h1>
+        <h1 id="threeshow">London Fashion Week // OFS AW19</h1>
         <h5>Fashion Show</h5>
         <h5>16/02/2019</h5>
         <p style="text-align:left" align="center">Oxford Fashion Studio will present collections from extra ordinary designers on independent runway shows coinciding with London Fashion Week. London  has been a fashion capital since the 16th century.</p>
@@ -365,8 +367,8 @@ EC2M
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem3" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="threeshowbutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton2" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -415,7 +417,7 @@ EC2M
 
     <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1 >SMGlobal Catwalk - LONDON FASHION WEEK (Season 5)</h1>
+        <h1 id="catwalkone">SMGlobal Catwalk - LONDON FASHION WEEK (Season 5)</h1>
         <h5>Catwalk</h5>
         <h5>21/09/2019</h5>
         <p style="text-align:left" align="center">From the runways of New York, London, Paris and Dallas; British born, Award Winning International Fashion Designer and Philanthropist Samina Mughal returns with her new Collection and allows global opportunities for Emerging and Established Designers to showcase their collection in a Fashion Capital of the World.</p>
@@ -429,8 +431,8 @@ EC2M
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem4" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="catwalkonebutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton3" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -480,7 +482,7 @@ EC2M
 
      <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>SMGlobal Catwalk - LONDON FASHION WEEK (Season 4)</h1>
+        <h1 id="catwalktwo">SMGlobal Catwalk - LONDON FASHION WEEK (Season 4)</h1>
         <h5>Catwalk</h5>
         <h5>01/03/2019</h5>
         <p style="text-align:left" align="center"> From the runways of New York, London, Paris and Dallas; British born, Award Winning International Fashion Designer and Philanthropist Samina Mughal returns with her new Collection and allows global opportunities for Emerging and Established Designers to showcase their collection in a Fashion Capital of the World. </p>
@@ -493,8 +495,8 @@ EC2M
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem5" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="catwalktwobutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton4" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -544,7 +546,7 @@ EC2M
 
       <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>The Wedding Lounge</h1>
+        <h1 id="catwalkthree">The Wedding Lounge</h1>
         <h5>Catwalk</h5>
         <h5>20/07/2019</h5>
         <p style="text-align:left" align="center">A relaxed and interactive platform which will appeal to brides planning their wedding, sourcing for vendors or just looking for wedding inspirations and entertainment. Expect to meet our selected vendors who are happy to discuss everything about your special day.</p>
@@ -557,8 +559,8 @@ SE8 3HR
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem6" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="catwalkthreebutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton5" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -608,7 +610,7 @@ SE8 3HR
 
     <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1 >UK Glamour Awards Christmas Party</h1>
+        <h1 id="partyone">UK Glamour Awards Christmas Party</h1>
         <h5>Party</h5>
         <h5>06/12/2018</h5>
         <p style="text-align:left" align="center">Following 2 years of succesful UK Glamour Awards ceremonies, we are returning this December with the UK Glamour Awards Christmas Party. Come and party the night away with your favourite glamour stars at Spearmint Rhino, Tottenham Court Road, London.</p>
@@ -623,8 +625,8 @@ W1T 7NN
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem7" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="partyonebutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton6" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -674,7 +676,7 @@ W1T 7NN
 
   <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>London Runway Issue 30 Launch Party and Christmas Celebration</h1>
+        <h1 id="partytwo">London Runway Issue 30 Launch Party and Christmas Celebration</h1>
         <h5>Party</h5>
         <h5>06/12/2018</h5>
         <p style="text-align:left" align="center"> London Runway are taking over the Lone Design Club Christmas pop-up for one night only. Be prepared for an evening of networking, two free drinks per ticket, sustainable and ethical fashion, and fabulous appearances from our friends and collaborators. We'll be covering the whole event for our next issue, too, so you're in with a chance of appearing in print! </p>
@@ -688,8 +690,8 @@ W11 2SJ
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem8" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="partytwobutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton7" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -739,7 +741,7 @@ W11 2SJ
 
       <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>Burst: All White Party</h1>
+        <h1 id="partythree">Burst: All White Party</h1>
         <h5>Party</h5>
         <h5>15/12/2018</h5>
         <p style="text-align:left" align="center">
@@ -757,8 +759,8 @@ W1S 1AH
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem9" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="partythreebutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton8" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -808,7 +810,7 @@ W1S 1AH
 
       <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>Nakshi Fashion Week 2018</h1>
+        <h1 id="galleryone">Nakshi Fashion Week 2018</h1>
         <h5>Gallery</h5>
         <h5>21/03/2019</h5>
         <p style="text-align:left; margin-left: 1rem" align="center">
@@ -826,8 +828,8 @@ W1K 1HF
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem10" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="galleryonebutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton9" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -877,7 +879,7 @@ W1K 1HF
 
       <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1 >Tres Rasche pop up Party + Presentation</h1>
+        <h1 id="gallerytwo">Tres Rasche pop up Party + Presentation</h1>
         <h5>Gallery</h5>
         <h5>30/11/2018</h5>
         <p style="text-align:left" align="center"> What? Tres Rasche pop up Party + Presentation. Hosted + styled by: Betsy Johnson.
@@ -892,8 +894,8 @@ Where? Protein Studios. Wheen? Friday 30th November 2018. 7-11PM.</p>
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+          <button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem11" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="gallerytwobutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton10" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -943,7 +945,7 @@ Where? Protein Studios. Wheen? Friday 30th November 2018. 7-11PM.</p>
 
   <div style="height:auto; width:100%; background-image: url(assets/images/animated/3_animated_480x270.gif);background-position:center;background-size:cover;background-color:#333333;">
       <div style="color:#f4f4f4;height:100%;padding:1rem;background-color:rgba(51,51,51,0.8);">
-        <h1>Kryptik Clothing Launch Party</h1>
+        <h1 id="gallerythree">Kryptik Clothing Launch Party</h1>
         <h5>Gallery</h5>
         <h5>01/12/2018</h5>
         <p style="text-align:left" align="center"> Kryptik finds meaning by making it. It's been our mission to find young individuals with a burning passion for life and give them the platform they need to ignite their talent. Fashion lets us wear purpose, we can demonstrate our views and send a message. Our message is to get busy and stay foolish. To understand more come along for an unforgettable evening filled with live performances from some of London’s fiercest talent in the music scene. </p>
@@ -957,8 +959,8 @@ Where? Protein Studios. Wheen? Friday 30th November 2018. 7-11PM.</p>
 </p>
           
         <div style="max-width:175px;margin-bottom:0.5rem;">
-<button href="#" data-role="button" data-icon="shop" data-inline="true">Invite Friends</button>
-          <button href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
+<button href="#" data-role="button" data-icon="shop" data-inline="true"><a data-role="button" data-rel="popup"  data-position-to="window" data-transition="pop" href="mailto:?Subject= Invite%20your%20friends&body=https://cloudcitadel.cc/events.html#eventitem12" class="ui-btn" style="display: contents; overflow: auto;">Invite Friends</a></button>
+          <button id="gallerythreebutton" href="#" data-role="button" data-icon="shop" data-inline="true">Favourites</button>
           <button id="customButton11" href="#" data-role="button" data-icon="shop" data-inline="true">Buy Tickets</button>
         </div>
         </div>
@@ -1118,6 +1120,7 @@ document.getElementById('customButton11').addEventListener('click', function(e) 
 window.addEventListener('popstate', function() {
   handler.close();
 });
+//Backend - Tomasz Jurek w1576380
 </script>
         
 
@@ -1144,3 +1147,5 @@ window.addEventListener('popstate', function() {
       
   </body>
 </html>
+<!--Bror Nordstorm - w1552186 - Student 2 -->
+<!--Tomasz Jurek - w1576380 - Student 1 -->
